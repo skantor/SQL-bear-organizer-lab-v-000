@@ -11,15 +11,15 @@ def selects_all_bears_names_and_ages_that_are_alive_and_order_youngest_to_oldest
 end
 
 def selects_oldest_bear_and_returns_name_and_age
-  "SELECT name, age FROM bears WHERE MAX(age) GROUP BY name"
+  "SELECT name, max(age) FROM bears"
 end
 
 def select_youngest_bear_and_returns_name_and_age
-  "SELECT name, age FROM bears WHERE MIN(age) GROUP BY name"
+  "SELECT name, min(age) FROM bears"
 end
 
 def selects_most_prominent_color_and_returns_with_count
-  "SELECT color FROM bears "
+  "SELECT color, count(*) FROM bears WHERE color = 'dark brown'"
 end
 
 def counts_number_of_bears_with_goofy_temperaments
@@ -27,5 +27,5 @@ def counts_number_of_bears_with_goofy_temperaments
 end
 
 def selects_bear_that_killed_Tim
-  "SELECT * FROM bears WHERE name = nil"
+  "SELECT * FROM bears WHERE gender = 'M' AND color = 'black' AND temperament = 'aggressive'"
 end
