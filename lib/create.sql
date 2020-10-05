@@ -4,6 +4,6 @@ CREATE TABLE bears (
     gender varchar,
     color varchar,
     temperament varchar,
-    alive boolean
+    alive boolean,
     id integer PRIMARY KEY
     );
