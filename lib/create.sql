@@ -1,5 +1,5 @@
 CREATE TABLE bears (
-    id integer AUTO_INCREMENT PRIMARY KEY,
+    id integer IDENTITY(1,1) PRIMARY KEY,
     name varchar,
     age integer, 
     gender varchar,
