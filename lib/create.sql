@@ -5,4 +5,5 @@ CREATE TABLE bears (
     gender varchar,
     color varchar,
     temperament varchar,
-    alive integer);
+    alive integer
+    );
